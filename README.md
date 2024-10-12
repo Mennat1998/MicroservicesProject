@@ -20,3 +20,11 @@ throw exception
 
 # Api Gateway 
 - to allow us to talk to our services through it
+
+
+# steps
+- After Running All services, Eureka is running on port http://localhost:8761 to see registerd instances
+- ApiGateWay is running on port 8080 http://localhost:8080/auth/register use this to register
+- Then http://localhost:8080/auth/getToken to login and get access token
+- then to access employee service you need to add authorization bearer and add token and access employee methods
+- For Example: http://localhost:8080/employee to get all employees and so on 
