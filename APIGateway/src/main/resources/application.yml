@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: APIGateway
+
+  cloud:
+    gateway:
+      routes:
+        ## employeeservice
+        - id: empservice
+          uri: lb://employeeService
+          predicates:
+            - Path=/empService/**
+          filters:
+             - AuthenticationFilter 
+             
+        ## Authenticationservice
+        - id: AuthenticationService
+          uri: lb://AuthenticationService
+          predicates:
+            - Path=/authservice/**
+
+            
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      
