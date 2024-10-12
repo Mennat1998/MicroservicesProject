@@ -28,3 +28,7 @@ throw exception
 - Then http://localhost:8080/auth/getToken to login and get access token
 - then to access employee service you need to add authorization bearer and add token and access employee methods
 - For Example: http://localhost:8080/employee to get all employees and so on 
+
+# Database
+- Using MySql Database
+- Also created 2 diffrent databases one for authentication service and the other for employee service to avoid coupling
