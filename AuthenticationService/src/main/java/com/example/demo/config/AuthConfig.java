@@ -30,7 +30,7 @@ public class AuthConfig {
 	    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 	        return http.csrf().disable()
 	                .authorizeHttpRequests()
-	                .requestMatchers("/authservice/register","/register", "/getToken", "/validateToken").
+	                .requestMatchers("/auth/register", "/auth/getToken", "/auth/validateToken").
 	                permitAll()
 	                .and()
 	                .build();

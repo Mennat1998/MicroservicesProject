@@ -16,7 +16,7 @@ import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
 
 @RestController
-//@RequestMapping("/Auth")
+@RequestMapping("/auth")
 public class UserController {
 
 	@Autowired
